@@ -14,7 +14,271 @@
 
     header {
       display: flex;
+      align-items: center;<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Oriented Programming Basic</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+    }
+
+    header {
+      display: flex;
       align-items: center;
+      background-color: #4f8aff;
+      padding: 10px;
+      color: white;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .title h1, .title p {
+      margin: 0;
+    }
+
+    nav {
+      background-color: rgb(40, 24, 115);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      padding: 0;
+    }
+
+    nav li {
+      background-color: #2c2c7a;
+      padding: 5px 12px;
+      border-radius: 5px;
+    }
+
+    nav li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .user-icon {
+      height: 40px;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+    .content-dropdown {
+      display: none;
+      flex-direction: column;
+      background-color: #f9f9f9;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    .content-dropdown a {
+      padding: 8px 16px;
+      text-decoration: none;
+      display: block;
+      color: #000;
+    }
+
+    .content-dropdown a:hover {
+      background-color: #ddd;
+    }
+
+    main {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .left, .right {
+      width: 20%;
+    }
+
+    .center {
+      width: 60%;
+      text-align: center;
+    }
+
+    .center iframe {
+      width: 560px;
+      height: 315px;
+      border: none;
+    }
+
+    .directed {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .time {
+      font-size: 32px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #4f8aff;
+      animation: flicker 1.5s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+      margin-top: 20px;
+      padding: 5px;
+      max-width: 180px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .calendar div {
+      padding: 6px;
+      text-align: center;
+      background-color: #f1f1f1;
+      font-size: 13px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="logo.png" alt="College Logo" /></div>
+    <div class="logo"><img src="logo1.png" alt="Department Logo" /></div>
+    <div class="title">
+      <h1>Object Oriented Programming Basic</h1>
+      <p>การเขียนโปรแกรมเชิงวัตถุเบื้องต้น</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="about.html">ABOUT US</a></li>
+      <li><a href="crouse.html">COURSE SYLLABUS</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSdTMG6v_UvAruSlDFKH6YOoh1CcWZJIUtgDvHxcHNzm_jWOvg/viewform?usp=dialog">PRE TEST</a></li>
+      <li class="nav-item">
+        <a href="#" onclick="toggleDropdown(event)">CONTENT</a>
+        <div class="content-dropdown" id="contentDropdown">
+          <a href="reason1.html">บทที่ 1</a>
+          <a href="reason2.html">บทที่ 2</a>
+          <a href="reason3.html">บทที่ 3</a>
+          <a href="reason4.html">บทที่ 4</a>
+          <a href="reason5.html">บทที่ 5</a>
+          <a href="reason6.html">บทที่ 6</a>
+          <a href="#">Midterm Test</a>
+          <a href="reason7.html">บทที่ 7</a>
+          <a href="reason8.html">บทที่ 8</a>
+          <a href="reason9.html">บทที่ 9</a>
+          <a href="reason10.html">บทที่ 10</a>
+          <a href="reason11.html">บทที่ 11</a>
+          <a href="reason12.html">บทที่ 12</a>
+          <a href="reason13.html">บทที่ 13</a>
+          <a href="#">Final Test</a>
+        </div>
+      </li>
+      <li><a href="contact.html">CONTACT</a></li>
+      <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScpRZAnhdEZv-jzIgkPYi5um6moRWYR3f9NNoGLloCBYWq8Uw/viewform?usp=dialog" target="_blank">SATICFATION</a></li>
+
+    </ul>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfP9dIvJ96Tz8R-b_13u99imIOn_T0O5o-Vn2Ahc4gLYup7Rw/viewform?usp=dialog" target="_blank" class="user-icon">
+  <img src="295128.png" class="user-icon" alt="Login Icon">
+</a>
+  </nav>
+  <div style="background-color: #e6f0ff; padding: 8px;">
+  <marquee behavior="scroll" direction="left" scrollamount="5" style="color: #003366; font-size: 18px; font-weight: bold;">
+    🔔 ยินดีต้อนรับสู่เว็บไซต์วิชา Object Oriented Programming Basic | เขียนโดย นายเทียนชัย เดชดี และ นายกรวิทย์ สว่างจิตต์ 🔔
+  </marquee>
+</div>
+
+  <main>
+    <div class="left">
+      <div class="time" id="time"></div>
+      <div class="calendar" id="calendar"></div>
+      <div class="calendar-links">
+  <ul>
+    <li><a href="https://www.kkwtech.ac.th/mainpage" target="_blank">KKW Tech Mainpage</a></li>
+    <li><a href="https://ins-media.blogspot.com/" target="_blank">INS Media</a></li>
+    <li><a href="https://resourcekkw2.blogspot.com/" target="_blank">Resource KKW</a></li>
+    <li><a href="http://www.r-channel.net/video" target="_blank">R-Channel Video</a></li>
+    <li><a href="https://irvvk2.blogspot.com/" target="_blank">IRVVK2 Blog</a></li>
+  </ul>
+</div>
+
+    </div>
+
+    <div class="center">
+      <iframe src="https://www.youtube.com/embed/wvgXAw5xcpg" allowfullscreen></iframe>
+      <p class="directed">Directed by<br>Mr. Thianchai Dejdee<br>Mr. Korawit Sawangjit</p>
+    </div>
+
+    <div class="right">
+  <h3 style="color: #4f8aff; margin-bottom: 10px;">🎬 คลิปน่าดูจากวิชา OOP</h3>
+  <ul>
+    <li><a href="https://www.youtube.com/watch?v=YXNwADEE3EU" target="_blank">🌟 เข้าใจ Class และ Object ง่ายๆ</a></li>
+    <li><a href="https://www.youtube.com/watch?v=JORYwfJqEy8" target="_blank">📦 Constructor & Destructor คืออะไร?</a></li>
+    <li><a href="https://www.youtube.com/watch?v=VKJAmjpEzds" target="_blank">🔄 Inheritance แบบเข้าใจง่าย</a></li>
+    <li><a href="https://www.youtube.com/watch?v=-xXnCUUcv1U" target="_blank">🎯 Polymorphism คืออะไร ใช้งานยังไง?</a></li>
+    <li><a href="https://www.youtube.com/watch?v=tlFGTpLRCxQ" target="_blank">🛠 สรุป OOP ทั้งหมดใน 10 นาที!</a></li>
+  </ul>
+</div>
+
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      document.getElementById('time').textContent = now.toLocaleTimeString();
+
+      const calendar = document.getElementById('calendar');
+      calendar.innerHTML = '';
+      const today = now.getDate();
+      const monthDays = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+
+      for (let i = 1; i <= monthDays; i++) {
+        const dayDiv = document.createElement('div');
+        dayDiv.textContent = i;
+        if (i === today) {
+          dayDiv.style.backgroundColor = '#4f8aff';
+          dayDiv.style.color = 'white';
+          dayDiv.style.fontWeight = 'bold';
+        }
+        calendar.appendChild(dayDiv);
+      }
+    }
+
+    setInterval(updateDateTime, 1000);
+    updateDateTime();
+
+    function toggleDropdown(event) {
+      event.preventDefault();
+      const dropdown = document.getElementById('contentDropdown');
+      dropdown.style.display = (dropdown.style.display === 'flex') ? 'none' : 'flex';
+    }
+  </script>
+</body>
+</html> 
       background-color: #4f8aff;
       padding: 10px;
       color: white;
